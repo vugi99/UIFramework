@@ -80,9 +80,9 @@ function UIDialog()
         end
 
         local cnt = -1
-        for key,value in pairs(self.children) do
-            value.options.parent = self.options.id .. "-".. cnt
+        for key,value in ipairs(self.children) do
             cnt = cnt + 1
+            value.options.parent = self.options.id .. "-".. cnt
         end
 
         counter = counter - 1
